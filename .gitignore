@@ -1,0 +1,22 @@
+# Lookup tables and reference data
+lookups/
+
+# Test data and sample files
+test_data/
+
+# Python virtual environment
+env/
+
+# macOS system files
+.DS_Store
+.DS_Store?
+._*
+.Spotlight-V100
+.Trashes
+ehthumbs.db
+Thumbs.db
+
+# Python cache files
+__pycache__/
+*.py[cod]
+*$py.class

@@ -1,0 +1,8 @@
+pandas
+numpy
+requests
+beautifulsoup4
+boto3
+pyarrow
+smart_open
+gsscoder_python
