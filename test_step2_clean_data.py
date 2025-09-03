@@ -1,5 +1,5 @@
 # test_clean_data.py
-from clean_data import handler
+from step2_clean_data import handler
 
 mock_event = {
     "input_path": "s3://dpa-population-projection-data/population_mid_year_estimates/ons_data/raw/",

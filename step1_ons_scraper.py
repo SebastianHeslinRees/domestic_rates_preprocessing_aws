@@ -1,6 +1,6 @@
 import requests
 from bs4 import BeautifulSoup
-import boto3  # Commented out for local testing
+#import boto3  # Commented out for local testing
 import os
 
 s3 = boto3.client('s3')  # Commented out for local testing

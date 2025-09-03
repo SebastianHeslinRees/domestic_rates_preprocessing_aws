@@ -16,7 +16,7 @@ s3_resource = boto3.resource('s3')
 
 # Constants
 S3_PARQUET_ZIP_S3_URI = "s3://dpa-population-projection-data/population_mid_year_estimates/modelled-population-backseries/origin_destination_2002_to_2020.parquet.zip"
-S3_NEW_SERIES_PATH = "population_mid_year_estimates/ons_data/cleaned_data_combined/3_cleaned_data_combined.csv"
+S3_NEW_SERIES_PATH = "population_mid_year_estimates/ons_data/cleaned_data_combined/cleaned_data_combined.parquet"
 OUTPUT_PARQUET_PREFIX = "population_mid_year_estimates/ons_data/4_clean_old_and_new_combined_series.parquet"
 TMP_DIR = "/tmp"
 
@@ -87,7 +87,8 @@ def handler(event, context):
     tmp_csv_path = os.path.join(TMP_DIR, "new_series.csv")
     print(f"📥 Downloading new series from S3: {S3_NEW_SERIES_PATH}")
     s3.download_file(BUCKET_NAME, S3_NEW_SERIES_PATH, tmp_csv_path)
-    new_df = pd.read_csv(tmp_csv_path)
+    #new_df = pd.read_csv(tmp_csv_path)
+    new_df = pd.read_parquet(tmp_csv_path)
     print(f"✅ Loaded new series shape: {new_df.shape}")
 
     # 5. Combine and filter

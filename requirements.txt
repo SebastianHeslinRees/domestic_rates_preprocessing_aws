@@ -1,8 +1,23 @@
+# Core data processing
 pandas
 numpy
+pyarrow
+
+# Web scraping and HTTP requests
 requests
 beautifulsoup4
+openpyxl
+
+# AWS integration
 boto3
-pyarrow
+
+# File handling and compression
 smart_open
+
+# Geography and coding utilities
+# pip install git+https://github.com/SebastianHeslinRees/gsscoder_python.git
 gsscoder_python
+
+
+# R data file reading
+pyreadr
